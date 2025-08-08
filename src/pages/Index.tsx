@@ -81,11 +81,23 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <Button variant="outline" size="sm">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => {
+                  toast({
+                    title: "Настройки",
+                    description: "Панель настроек откроется в ближайшем обновлении"
+                  });
+                }}
+              >
                 <Icon name="Settings" size={16} className="mr-2" />
                 Настройки
               </Button>
-              <Button size="sm">
+              <Button 
+                size="sm"
+                onClick={() => setCurrentView('constructor')}
+              >
                 <Icon name="Plus" size={16} className="mr-2" />
                 Создать дашборд
               </Button>
